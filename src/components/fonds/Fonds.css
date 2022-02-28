@@ -1,0 +1,238 @@
+#fond{
+    margin:6rem auto auto auto;
+}
+
+/* Border X get width  */
+div.borderXwidth a:before, div.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: rgb(57, 149, 253);
+    transition: all 0.7s;
+}
+
+div.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+div.contai .nos_invest
+{
+    color: rgb(27, 27, 110);
+    text-decoration: none;
+    font: 18px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/*****carrousel 3d automatique*****/
+
+
+
+img{max-width:100%}
+
+.contenu_carou_auto{
+
+margin:5rem auto auto auto;
+width:420px;
+height:279px;
+perspective:8000px
+	
+	}
+		
+.caroussel-image{
+	
+animation:rotation 24s infinite alternate linear;	
+transform-style:preserve-3d;
+position:relative;	
+
+}
+
+.caroussel-image img{
+	
+position: absolute;
+top:0;
+left: 0;
+	
+	
+	}
+
+
+		
+.caroussel-image img{
+	
+filter:drop-shadow(0 12px 5px hsla(0,0%,0%,.4));
+width:350px;
+height:200px;
+left:10px;
+outline:1px solid transparent;
+backface-visibility:hidden
+	
+	}
+		
+.caroussel-image img:nth-child(1){
+	
+transform:translate3d(0,0,495px)
+		
+		}
+		
+.caroussel-image img:nth-child(2){
+	
+transform:rotateY(165deg) translateZ(495px)
+	
+		}
+		
+.caroussel-image img:nth-child(3){
+	
+	transform:rotateY(230deg) translateZ(495px)
+	
+	}
+	
+.caroussel-image img:nth-child(4){
+	
+	transform:rotateY(295deg) translateZ(495px)
+	
+	}
+
+	
+
+	
+@keyframes rotation{
+from{transform:rotatey(0)}
+to{transform:rotatey(0.5turn)}}
+	
+/*****fin carrousel 3d automatique*****/
+
+#fisc{
+    margin-top: 100px;
+}
+
+.l-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.avac{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+h3{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.l-cont{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    border-radius: 15px;
+    background-image: linear-gradient(40deg, rgb(114, 112, 112),rgb(97, 97, 245));
+}
+
+.l-contai{
+    margin-top: 50px;
+    justify-content: space-between;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.l-contai >h3{
+    color: rgb(36, 30, 18);
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.l-contai >span{
+    color: rgb(253, 246, 231);
+    text-decoration: wavy;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+
+.wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around; }
+  
+  .card {
+    width: 280px;
+    height: 370px;
+    border-radius: 15px;
+    padding: 1rem;
+    background: white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.4s ease-out;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); }
+    .card {
+      transform: translateY(20px); }
+      .card:hover:before {
+        opacity: 1; }
+      .card:hover .info {
+        opacity: 1;
+        transform: translateY(0px); }
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      transition: 0.5s;
+      opacity: 0; }
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 15px; }
+    .card .info {
+      position: relative;
+      z-index: 3;
+      color: white;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.5s; }
+      .card .info h1 {
+        margin: 0px; }
+      .card .info p {
+        letter-spacing: 1px;
+        font-size: 15px;
+        margin-top: 8px; }
+  
